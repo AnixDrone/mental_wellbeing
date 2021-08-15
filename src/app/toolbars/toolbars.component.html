@@ -1,0 +1,24 @@
+<mat-toolbar style="height: 100px;" color="primary" role="heading" >
+  <span style="font-size:50px;" class="title">Mental Help</span>
+  <span class="example-spacer"></span>
+  <button style="width: 13%;height: 50%;" mat-button >
+    <mat-icon class="btn-toolbar" >face</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-toolbar style="height: 90px">
+  <span style="margin-left:3%"></span>
+  <button mat-button class="second-toolbar">За Нас</button>
+  <span class="spacer"></span>
+  <button mat-button class="second-toolbar">Мотивирачки пораки</button>
+  <span class="spacer"></span>
+  <button mat-button class="second-toolbar">Тестови</button>
+  <span class="spacer"></span>
+  <button mat-button class="second-toolbar">Професионална Помош</button>
+  <span class="spacer"></span>
+  <button mat-button class="second-toolbar">Музика</button>
+  <span class="example-spacer"></span>
+  <button mat-button ><mat-icon>skip_previous</mat-icon></button>
+  <button mat-button (click)="click_play()" ><mat-icon>{{play_text}}</mat-icon></button>
+  <button mat-button ><mat-icon>skip_next</mat-icon></button>
+</mat-toolbar>
+
