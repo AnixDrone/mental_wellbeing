@@ -1,31 +1,45 @@
+<mat-grid-list cols="5" rowHeight="1:1" >
+  <mat-grid-tile *ngFor="let i of testovi">
+    <mat-card >
+      <mat-card-header class="mat-primary">
+        <mat-card-title>
+          Тестови за {{i}}
+        </mat-card-title>
+      </mat-card-header>
+      <img mat-card-image style="max-width:500px;min-width:100px" src="assets/purple.png" alt="PURPLE IMG">
+      <mat-card-footer>
+        <button style="width: 100%;font-size:20px" mat-button>Започни го тестот</button>
+      </mat-card-footer>
+    </mat-card>
+  </mat-grid-tile>
 
-
-<div fxLayout="row"  fxLayoutGap="10px"  [style.margin-top]="'12px'">
-<mat-card max-width="250px" *ngFor="let i of testovi">
-  <mat-card-header class="mat-primary">
-    <mat-card-title>
-      Тестови за {{i}}
-    </mat-card-title>
-  </mat-card-header>
-  <img mat-card-image  src="assets/purple.png" alt="PURPLE IMG">
-  <mat-card-footer>
-    <button style="width: 100%" mat-button>Започни го тестот</button>
-  </mat-card-footer>
-</mat-card>
-</div>
-<div fxLayout="row"  fxLayoutGap="10px"  [style.margin-top]="'12px'">
-  <mat-card max-width="250px" *ngFor="let i of testovi1">
-    <mat-card-header class="mat-primary">
-      <mat-card-title>
-        Тестови за {{i}}
-      </mat-card-title>
-    </mat-card-header>
-    <img mat-card-image  src="assets/purple.png" alt="PURPLE IMG">
-    <mat-card-footer>
-      <button style="width: 100%" mat-button>Започни го тестот</button>
-    </mat-card-footer>
-  </mat-card>
-</div>
+</mat-grid-list>
+<!--<div fxLayout="row"  fxLayoutGap="10px"  [style.margin-top]="'12px'">-->
+<!--<mat-card max-width="250px" *ngFor="let i of testovi">-->
+<!--  <mat-card-header class="mat-primary">-->
+<!--    <mat-card-title>-->
+<!--      Тестови за {{i}}-->
+<!--    </mat-card-title>-->
+<!--  </mat-card-header>-->
+<!--  <img mat-card-image  src="assets/purple.png" alt="PURPLE IMG">-->
+<!--  <mat-card-footer>-->
+<!--    <button style="width: 100%" mat-button>Започни го тестот</button>-->
+<!--  </mat-card-footer>-->
+<!--</mat-card>-->
+<!--</div>-->
+<!--<div fxLayout="row"  fxLayoutGap="10px"  [style.margin-top]="'12px'">-->
+<!--  <mat-card max-width="250px" *ngFor="let i of testovi1">-->
+<!--    <mat-card-header class="mat-primary">-->
+<!--      <mat-card-title>-->
+<!--        Тестови за {{i}}-->
+<!--      </mat-card-title>-->
+<!--    </mat-card-header>-->
+<!--    <img mat-card-image  src="assets/purple.png" alt="PURPLE IMG">-->
+<!--    <mat-card-footer>-->
+<!--      <button style="width: 100%" mat-button>Започни го тестот</button>-->
+<!--    </mat-card-footer>-->
+<!--  </mat-card>-->
+<!--</div>-->
 <!--<div fxLayout="row"  fxLayoutGap="10px"  [style.margin-top]="'12px'">-->
 <!--  <mat-card max-width="250px" *ngFor="let i of testovi2">-->
 <!--    <mat-card-header class="mat-primary">-->
