@@ -1,0 +1,63 @@
+<mat-card style="margin:2%">
+  <mat-card-header style="background-color:#673ab7">
+
+    <mat-card-title style="font-size:30px;margin:15%;color: white">
+      Приказни
+    </mat-card-title>
+
+  </mat-card-header>
+  <mat-card-content *ngIf="this.prikazna_check">
+
+    <mat-card style="margin-bottom: 1%;margin-top: 1%">
+      <mat-card-header style="background-color:#673ab7" >
+
+        <mat-card-title style="font-size:25px;margin-top: 3%;margin-bottom: 3%;color: white">
+          Вистинска инспирација: Наставничка виртуелно ги едуцирала своите ученици
+          за време на хемотерапија
+        </mat-card-title>
+
+      </mat-card-header>
+      <mat-card-content style="height:150px;"></mat-card-content>
+      <mat-card-actions>
+
+        <button mat-raised-button color="primary" style="font-size:25px;margin-left: 80%;margin-bottom: 1%;height:50px" (click)="this.prikazna_check=!this.prikazna_check" > Прочитај повеќе</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card style="margin-bottom: 1%;margin-top: 1%">
+      <mat-card-header style="background-color:#673ab7" >
+
+        <mat-card-title style="font-size:25px;margin-top: 3%;margin-bottom: 3%;color: white;word-spacing: 2px">
+          Верно куче го чекаше својот сопственик шест дена пред болница во Турција
+        </mat-card-title>
+
+      </mat-card-header>
+      <mat-card-content style="height:150px;"></mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" style="font-size:25px;margin-left: 80%;margin-bottom: 1%;height:50px"> Прочитај повеќе</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-card-content>
+  <mat-card-content *ngIf="!this.prikazna_check">
+    <mat-card style="margin-bottom: 1%;margin-top: 1%">
+      <mat-card-header style="background-color:#673ab7" >
+
+        <mat-card-title style="font-size:30px;margin-top: 3%;margin-bottom: 3%;color: white">
+          Вистинска инспирација: Наставничка виртуелно ги едуцирала своите ученици
+          за време на хемотерапија
+        </mat-card-title>
+
+      </mat-card-header>
+      <mat-card-content >
+        <h1 style="margin-top: 2%;font-size:25px">
+        Кели Клајн оди во болница еднаш месечно и останува 5 часа, а за тоа време болницата станува нејзина привремена училница. Оваа 32-годишна наставничка носи лаптоп и материјали за да ги едуцира и инспирира нејзините 5 и 6-годишни ученици дека не треба да се откажуваш од твојата пасија без разлика на се. Таа се лекува за рак на панкреасот веќе 2 години но силно се држи. Родителите на децата се понудија да и платат делумна сума од нејзините сметки за лекување бидејќи децата многу ја сакаат.
+        </h1>
+      </mat-card-content>
+      <mat-card-actions>
+
+        <button mat-raised-button color="accent" style="font-size:25px;margin-left: 80%;margin-bottom: 1%;height:50px" (click)="this.prikazna_check=!this.prikazna_check" > Назад кон приказни</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-card-content>
+
+</mat-card>

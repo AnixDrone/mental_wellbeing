@@ -1,0 +1,31 @@
+<mat-grid-list cols="4">
+  <mat-grid-tile [colspan]="1"  [rowspan]="1" >
+    <mat-card >
+      <mat-card-content>
+        <img mat-card-image
+             src="https://t4.ftcdn.net/jpg/00/97/00/09/360_F_97000908_wwH2goIihwrMoeV9QF3BW6HtpsVFaNVM.jpg"
+             alt="Profile Pic">
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button style="font-size: 20px;">Измени податоци</button>
+        <button mat-raised-button style="font-size: 20px;">Избриши податоци</button>
+      </mat-card-actions>
+    </mat-card>
+
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="2" [rowspan]="1" >
+    <mat-card >
+      <mat-card-header>
+        <button class="profile-setting-view" mat-raised-button (click)="this.description=this.osnovni_podatoci" >Основни податоци</button>
+<!--        <button class="profile-setting-view" mat-raised-button (click)="this.description=this.interesi">Интереси</button>-->
+        <button class="profile-setting-view" mat-raised-button (click)="this.description=this.testovi">Дијагнози</button>
+      </mat-card-header>
+      <mat-card-content [innerHTML]="this.description">
+
+      </mat-card-content>
+      <mat-card-content>
+
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

@@ -1,7 +1,7 @@
 <mat-toolbar style="height: 100px;" color="primary" role="heading" >
-  <span style="font-size:50px;" class="title">Mental Help</span>
+  <button mat-button style="font-size:50px;" class="title" routerLink="" >Mental Help</button>
   <span class="example-spacer"></span>
-  <button style="width: 13%;height: 50%;" mat-button >
+  <button style="width: 13%;height: 50%;" mat-button routerLink="my-profile" >
     <mat-icon class="btn-toolbar" >face</mat-icon>
   </button>
 </mat-toolbar>
@@ -9,9 +9,19 @@
   <span style="margin-left:3%"></span>
   <button mat-button class="second-toolbar">За Нас</button>
   <span class="spacer"></span>
-  <button mat-button class="second-toolbar">Мотивирачки пораки</button>
+  <button  mat-button [matMenuTriggerFor]="motivacija" class="second-toolbar" > Мотивирачки пораки</button>
+  <mat-menu #motivacija="matMenu">
+    <button mat-menu-item routerLink="/citati">
+      <mat-icon>format_quote</mat-icon>
+      <span style="font-size:25px">Цитати</span>
+    </button>
+    <button mat-menu-item routerLink="/prikazni" >
+      <mat-icon>auto_stories</mat-icon>
+      <span style="font-size:25px">Приказни</span>
+    </button>
+  </mat-menu>
   <span class="spacer"></span>
-  <button mat-button class="second-toolbar">Тестови</button>
+  <button mat-button  class="second-toolbar">Тестови</button>
   <span class="spacer"></span>
   <button mat-button class="second-toolbar">Професионална Помош</button>
   <span class="spacer"></span>

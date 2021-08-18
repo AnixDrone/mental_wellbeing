@@ -1,0 +1,34 @@
+<mat-card>
+  <mat-card-header style="background-color:#673ab7">
+
+    <mat-card-title style="font-size:30px;margin-top: 15%;margin-bottom:15%; color: white">
+      Тест за депресија
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-card>
+      <label id="prvo">Pick your favorite season</label>
+      <mat-radio-group
+        aria-labelledby="prvo"
+        class="example-radio-group"
+        [(ngModel)]="option_selected">
+        <mat-radio-button class="example-radio-button" *ngFor="let op of options" [value]="op">
+          {{op}}
+        </mat-radio-button>
+      </mat-radio-group>
+      <div>Your favorite season is: {{option_selected}} </div>
+    </mat-card>
+    <mat-card>
+      <label id="vtoro">Pick your favorite season</label>
+      <mat-radio-group
+        aria-labelledby="vtoro"
+        class="example-radio-group"
+        [(ngModel)]="option_selected">
+        <mat-radio-button class="example-radio-button" *ngFor="let op of options" [value]="op">
+          {{op}}
+        </mat-radio-button>
+      </mat-radio-group>
+      <div>Your favorite season is: {{option_selected}} </div>
+    </mat-card>
+  </mat-card-content>
+</mat-card>
