@@ -1,34 +1,58 @@
-<mat-card>
+<mat-card style="margin:1%" >
   <mat-card-header style="background-color:#673ab7">
-
     <mat-card-title style="font-size:30px;margin-top: 15%;margin-bottom:15%; color: white">
       Тест за депресија
     </mat-card-title>
   </mat-card-header>
-  <mat-card-content>
-    <mat-card>
-      <label id="prvo">Pick your favorite season</label>
+  <mat-card-content *ngIf="!test_done">
+    <mat-card style="font-size:25px;margin-bottom: 1%;margin-top: 1%">
+      <mat-card-header style="background-color:#673ab7;color: white;">
+      <mat-card-title style="margin-top:3%" id="prvo">Некогаш се чуствувам премногу тажно</mat-card-title>
+      </mat-card-header>
       <mat-radio-group
         aria-labelledby="prvo"
         class="example-radio-group"
-        [(ngModel)]="option_selected">
+        [(ngModel)]="option_selected_question_1">
         <mat-radio-button class="example-radio-button" *ngFor="let op of options" [value]="op">
           {{op}}
         </mat-radio-button>
       </mat-radio-group>
-      <div>Your favorite season is: {{option_selected}} </div>
+      <div>Вашиот одговор:{{option_selected_question_1}} </div>
     </mat-card>
-    <mat-card>
-      <label id="vtoro">Pick your favorite season</label>
+    <mat-card style="font-size:25px;margin-bottom: 1%;margin-top: 1%">
+      <mat-card-header style="background-color:#673ab7;color: white;">
+      <mat-card-title style="margin-top:3%" id="prvo">Некои денови не можам да се натерам да станам од кревет</mat-card-title>
+      </mat-card-header>
       <mat-radio-group
         aria-labelledby="vtoro"
         class="example-radio-group"
-        [(ngModel)]="option_selected">
+        [(ngModel)]="option_selected_question_2">
         <mat-radio-button class="example-radio-button" *ngFor="let op of options" [value]="op">
           {{op}}
         </mat-radio-button>
       </mat-radio-group>
-      <div>Your favorite season is: {{option_selected}} </div>
+      <div>Вашиот одговор: {{option_selected_question_2}} </div>
     </mat-card>
   </mat-card-content>
+  <mat-card-content *ngIf="test_done" style="font-size:25px;margin-top: 1%" >
+    <mat-card-header>
+      <mat-card-title><b>Резултати:</b></mat-card-title>
+      <mat-card-title>Овој тест покажува дека е можно да имаш <b>депресија </b></mat-card-title>
+    </mat-card-header>
+    <mat-card-content style="margin-left:1%;width:90%">
+      <h1>ШТО ДА ПРАВАМ?</h1>
+      <h1>Најефективно е да внимаваш на твојот животен стил, односно, да се исхрануваш,
+        исправно и редовно, редовно вежбање, да спиеш доволен период од денот во ноќните
+        часови, да избегнуваш негативни луѓе и да учевствуваш во интерактивни активности.
+      </h1>
+      <h1>Иако може да ти звучи безполезно одржување на здрава рутина може да помогне многу
+        во почетните фази на депресија. Доколку се чувствуваш дека ти треба помош, можеш да
+        разговараш со некој oд нашите професионални психијатри.</h1>
+    </mat-card-content>
+  </mat-card-content>
+  <mat-card-actions>
+    <button  *ngIf="!test_done" mat-raised-button style="margin-left: 75%;font-size:30px;width:20%;height:50px" color="primary" [disabled]="option_selected_question_1==''||option_selected_question_2==''" (click)="test_done=!test_done">Завршив</button>
+    <button  *ngIf="test_done" mat-raised-button style="margin-left: 50%;margin-right: 2%;margin-bottom: 1%;font-size:30px;width:20%;height:50px" color="accent" [disabled]="option_selected_question_1==''||option_selected_question_2==''" (click)="test_done=!test_done">Повтори го тестот</button>
+    <button routerLink=""  *ngIf="test_done" mat-raised-button style="margin-left: 0%;font-size:30px;width:20%;height:50px" color="primary" [disabled]="option_selected_question_1==''||option_selected_question_2==''" >Врати се на тестовите</button>
+  </mat-card-actions>
 </mat-card>

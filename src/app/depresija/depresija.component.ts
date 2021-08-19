@@ -10,7 +10,9 @@ export class DepresijaComponent implements OnInit {
 
   constructor() {}
   options: string[] = ['Тотално се согласувам', 'Делумно се согласувам', 'Делумно не се согласувам', 'Тотално не се согласувам'];
-  option_selected:string='';
+  option_selected_question_1:string='';
+  option_selected_question_2:string='';
+  test_done:boolean=false;
   ngOnInit() {
 
   }
